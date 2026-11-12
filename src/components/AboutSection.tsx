@@ -13,7 +13,7 @@ export default function AboutSection() {
           <div className="overflow-hidden rounded-xl border-4 border-white shadow-lg lg:rounded-xl lg:border-6">
             <Image
               src="/about.webp"
-              alt="Dr. Serena Blake smiling warmly in a natural setting"
+              alt="Dr. Serena Blake zâmbind cald într-un decor natural"
               width={400}
               height={500}
               className="h-auto w-full object-cover lg:h-[480px] lg:w-full"
@@ -26,55 +26,54 @@ export default function AboutSection() {
               Dr. Serena Blake
             </p>
             <p className="text-[13px] text-neutral-700 lg:text-sm">
-              PsyD, Clinical Psychologist
+              PsyD, Psiholog Clinic
             </p>
             <p className="mt-1 text-[12px] text-amber-600 lg:mt-1 lg:text-xs">
-              ⭐ Trusted by 500+ Clients · 8+ Years Experience
+              ⭐ Peste 500 clienți mulțumiți · 8+ ani experiență
             </p>
           </figcaption>
         </figure>
 
         <div className="lg:pl-4">
           <span className="mb-4 inline-block rounded-full bg-yellow-200 px-4 py-1 text-sm font-medium text-gray-800">
-            About Dr. Serena Blake · Clinical Psychologist · Los Angeles
+            Despre Dr. Serena Blake · Psiholog Clinic · Timișoara
           </span>
 
           <h2
             id="about-heading"
             className="mb-4 text-3xl font-bold text-gray-800 md:text-4xl lg:mb-6 lg:text-5xl"
           >
-            Hi, I'm Dr. Serena Blake
+            Salut, sunt Dr. Serena Blake
           </h2>
 
           <p className="mb-4 leading-relaxed text-gray-700 lg:mb-6 lg:text-xl lg:leading-relaxed">
-            With over <strong>8 years of dedicated experience</strong> and more
-            than <strong>500 client sessions</strong>, I offer a{" "}
-            <strong>compassionate</strong>,{" "}
-            <strong>evidence-based approach</strong> to therapy. Whether you're{" "}
-            <strong>managing anxiety</strong>,{" "}
-            <strong>working through trauma</strong>, or{" "}
-            <strong>improving relationships</strong>, my goal is to support your
-            healing with <strong>warmth</strong>, <strong>trust</strong>, and{" "}
-            <strong>proven psychological techniques</strong>.
+            Cu o experiență de peste <strong>8 ani în domeniu</strong> și mai
+            mult de <strong>500 de sesiuni cu clienții</strong>, ofer o
+            abordare <strong>empatică</strong> și <strong>bazată pe dovezi științifice</strong> în
+            terapie. Fie că gestionezi <strong>stări de anxietate</strong>, lucrezi la
+            depășirea unor <strong>traume</strong> sau îți dorești{" "}
+            <strong>îmbunătățirea relațiilor</strong>, scopul meu este să te susțin în
+            procesul de vindecare cu <strong>căldură</strong>, <strong>încredere</strong> și{" "}
+            <strong>tehnici psihologice dovedite</strong>.
           </p>
 
           <p className="mb-4 leading-relaxed text-gray-700 lg:mb-6 lg:text-xl lg:leading-relaxed">
-            My therapeutic style blends{" "}
-            <strong>Cognitive-Behavioral Therapy (CBT)</strong> with{" "}
-            <strong>mindfulness</strong>, always centered on your{" "}
-            <strong>personal growth</strong>. I believe therapy should be both{" "}
-            <strong>grounding</strong> and <strong>empowering</strong>—equipping
-            you with tools to navigate life's challenges with{" "}
-            <strong>clarity</strong> and <strong>confidence</strong>.
+            Stilul meu terapeutic îmbină{" "}
+            <strong>Terapia Cognitiv-Comportamentală (TCC)</strong> cu{" "}
+            <strong>mindfulness-ul</strong>, având mereu în centru{" "}
+            <strong>dezvoltarea ta personală</strong>. Cred că terapia trebuie să fie atât{" "}
+            <strong>stabilizatoare</strong>, cât și <strong>încurajatoare</strong>—dotându-te
+            cu instrumente pentru a naviga prin provocările vieții cu{" "}
+            <strong>claritate</strong> și <strong>încredere</strong>.
           </p>
 
           <p className="leading-relaxed text-gray-700 lg:text-xl lg:leading-relaxed">
-            Whether we meet in my <strong>cozy office</strong> on Maplewood
-            Drive or <strong>virtually via Zoom</strong>, I strive to create a{" "}
-            <strong>safe</strong>, <strong>supportive space</strong> for every
-            client. Together, we can explore the{" "}
-            <strong>root of your struggles</strong> and move toward a more{" "}
-            <strong>peaceful</strong>, <strong>balanced life</strong>.
+            Fie că ne întâlnim în <strong>cabinetul meu primitor</strong> de pe
+            strada Maplewood sau <strong>virtual prin Zoom</strong>, mă străduiesc să creez un{" "}
+            <strong>spațiu sigur</strong> și <strong>susținător</strong> pentru fiecare
+            client. Împreună, putem explora{" "}
+            <strong>cauza profundă a dificultăților tale</strong> și putem avansa spre o viață mai{" "}
+            <strong>liniștită</strong> și <strong>echilibrată</strong>.
           </p>
         </div>
       </div>

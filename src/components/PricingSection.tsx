@@ -6,7 +6,7 @@ export default function PricingSection() {
   return (
     <section
       className="bg-white py-20"
-      id="pricing"
+      id="preturi"
       role="region"
       aria-labelledby="pricing-heading"
     >
@@ -15,11 +15,11 @@ export default function PricingSection() {
           id="pricing-heading"
           className="mb-4 text-4xl font-bold text-gray-900 md:text-5xl"
         >
-          Session Fees
+          Tarife ședințe
         </h2>
         <p className="mb-10 text-lg text-gray-800">
-          Choose the type of session that suits your needs — each designed with
-          compassionate care.
+          Alege tipul de ședință potrivit nevoilor tale — fiecare concepută cu
+          grijă și sprijin empatic.
         </p>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -31,26 +31,26 @@ export default function PricingSection() {
               id="individual-heading"
               className="mb-4 text-xl font-semibold text-[#004346]"
             >
-              Individual Session
+              Ședință Individuală
             </h3>
-            <p className="mb-2 text-4xl font-bold text-[#234245]">$200</p>
-            <p className="mb-4 text-sm text-gray-700">Per 50-minute session</p>
+            <p className="mb-2 text-4xl font-bold text-[#234245]">250 RON</p>
+            <p className="mb-4 text-sm text-gray-700">Durată: 50 de minute</p>
             <ul className="mb-6 flex flex-col items-start gap-2 text-sm text-gray-700">
               <li className="flex items-center gap-2">
                 <CheckCircle2 className="h-4 w-4 text-[#09bc8a]" />
-                One-on-one with Dr. Blake
+                1-la-1 cu Dr. Blake
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle2 className="h-4 w-4 text-[#09bc8a]" />
-                Tailored treatment plan
+                Plan de tratament personalizat
               </li>
             </ul>
             <a
               href="#contact"
-              aria-label="Book an individual therapy session"
+              aria-label="Programează o ședință individuală de terapie"
               className="block w-full rounded-lg border border-[#004346] px-6 py-2 text-center font-medium text-[#004346] transition hover:bg-[#004346] hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#004346] focus-visible:ring-offset-2"
             >
-              Book Individual Session
+              Programează ședința individuală
             </a>
           </article>
 
@@ -62,26 +62,26 @@ export default function PricingSection() {
               id="couples-heading"
               className="mb-4 text-xl font-semibold text-[#004346]"
             >
-              Couples Session
+              Ședință de Cuplu
             </h3>
-            <p className="mb-2 text-4xl font-bold text-[#234245]">$240</p>
-            <p className="mb-4 text-sm text-gray-700">Per 60-minute session</p>
+            <p className="mb-2 text-4xl font-bold text-[#234245]">350 RON</p>
+            <p className="mb-4 text-sm text-gray-700">Durată: 60 de minute</p>
             <ul className="mb-6 flex flex-col items-start gap-2 text-sm text-gray-700">
               <li className="flex items-center gap-2">
                 <CheckCircle2 className="h-4 w-4 text-[#09bc8a]" />
-                Support for both partners
+                Susținere pentru ambii parteneri
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle2 className="h-4 w-4 text-[#09bc8a]" />
-                Conflict resolution & communication
+                Rezolvarea conflictelor și comunicare
               </li>
             </ul>
             <a
               href="#contact"
-              aria-label="Book a couples therapy session"
+              aria-label="Programează o ședință de consiliere de cuplu"
               className="block w-full rounded-lg bg-[#234245] px-6 py-2 text-center font-medium text-white transition hover:bg-[#1b3435] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#234245] focus-visible:ring-offset-2"
             >
-              Book Couples Session
+              Programează ședința de cuplu
             </a>
           </article>
         </div>

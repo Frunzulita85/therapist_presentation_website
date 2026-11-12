@@ -43,10 +43,9 @@ export default function StatsSection() {
           <h2 className="mb-2 text-5xl font-extrabold">
             <Counter target={8} start={isInView} />+
           </h2>
-          <h3 className="text-xl font-semibold">Years Experience</h3>
+          <h3 className="text-xl font-semibold">Ani de experiență</h3>
           <p className="mt-2 text-white/80">
-            Providing compassionate and personalized therapy for individuals and
-            couples.
+            Oferind terapie empatică și personalizată pentru persoane și cupluri.
           </p>
         </div>
 
@@ -54,9 +53,9 @@ export default function StatsSection() {
           <h2 className="mb-2 text-5xl font-extrabold">
             <Counter target={500} start={isInView} />+
           </h2>
-          <h3 className="text-xl font-semibold">Client Sessions</h3>
+          <h3 className="text-xl font-semibold">Ședințe cu clienții</h3>
           <p className="mt-2 text-white/80">
-            Supporting clients in their journey to heal, grow, and find clarity.
+            Sprijinind clienții în călătoria lor spre vindecare, dezvoltare și claritate.
           </p>
         </div>
       </div>

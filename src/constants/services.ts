@@ -1,23 +1,23 @@
 export const services = [
   {
-    title: "Anxiety & Stress Management",
+    title: "Gestionarea anxietății și a stresului",
     image: "/service1.webp",
     description:
-      "Learn to manage overwhelm, anxious thoughts, and emotional burnout with evidence-based tools like CBT and mindfulness.",
-    tag: "Available",
+      "Învață să gestionezi stările de copleșire, gândurile anxioase și epuizarea emoțională prin metode validate științific, precum terapia cognitiv-comportamentală (TCC) și mindfulness.",
+    tag: "Disponibil",
   },
   {
-    title: "Relationship Counseling",
+    title: "Consiliere de cuplu și relații",
     image: "/service2.webp",
     description:
-      "Strengthen communication, rebuild trust, and deepen your connection whether you're dating, engaged, or married.",
-    tag: "Limited Availability",
+      "Îmbunătățește comunicarea, reconstruiește încrederea și aprofundează conexiunea emoțională, indiferent dacă sunteți la început de drum, logodiți sau căsătoriți.",
+    tag: "Locuri limitate",
   },
   {
-    title: "Trauma Recovery",
+    title: "Vindecarea traumelor",
     image: "/service3.webp",
     description:
-      "Heal from past emotional wounds in a safe, supportive space. Dr. Blake specializes in trauma-informed, compassionate care.",
-    tag: "Now Accepting Clients",
+      "Vindecă rănile emoționale din trecut într-un spațiu sigur și empatic. Terapie centrată pe traumă, desfășurată cu blândețe și respect față de ritmul tău.",
+    tag: "Înscrieri deschise",
   },
 ];

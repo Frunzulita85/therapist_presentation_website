@@ -63,7 +63,7 @@ export default function ContactSection() {
 
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "https://www.google.com/recaptcha/api.js";
+    script.src = "https://www.google.com/recaptcha/api.js?hl=ro";
     script.async = true;
     script.defer = true;
     script.onload = () => setIsRecaptchaLoaded(true);
@@ -75,24 +75,30 @@ export default function ContactSection() {
     };
 
     return () => {
-      document.head.removeChild(script);
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
     };
   }, []);
 
   const validate = (): FormErrors => {
     const newErrors: FormErrors = {};
-    if (!formData.name.trim()) newErrors.name = "Name is required";
-    if (!formData.phone.trim()) newErrors.phone = "Phone number is required";
-    if (!formData.email.trim()) newErrors.email = "Email is required";
+    if (!formData.name.trim()) newErrors.name = "Numele este obligatoriu";
+    if (!formData.phone.trim())
+      newErrors.phone = "Numărul de telefon este obligatoriu";
+    if (!formData.email.trim()) newErrors.email = "Adresa de email este obligatorie";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
-      newErrors.email = "Invalid email format";
+      newErrors.email = "Format de email invalid";
     if (!formData.message.trim())
-      newErrors.message = "Please let us know what brings you here";
-    if (!formData.time.trim()) newErrors.time = "Preferred time is required";
+      newErrors.message = "Te rugăm să ne spui cu ce te putem ajuta";
+    if (!formData.time.trim())
+      newErrors.time = "Intervalul orar preferat este obligatoriu";
     if (!formData.contactMethod.trim())
-      newErrors.contactMethod = "Please select a contact method";
-    if (!formData.agree) newErrors.agree = "You must agree to be contacted";
-    if (!recaptchaToken) newErrors.recaptcha = "Please complete the reCAPTCHA";
+      newErrors.contactMethod = "Te rugăm să alegi o metodă de contact";
+    if (!formData.agree)
+      newErrors.agree = "Trebuie să îți exprimi acordul pentru a fi contactat(ă)";
+    if (!recaptchaToken)
+      newErrors.recaptcha = "Te rugăm să completezi verificarea reCAPTCHA";
     return newErrors;
   };
 
@@ -121,7 +127,7 @@ export default function ContactSection() {
       });
 
       if (!response.ok) {
-        throw new Error("Failed to send message");
+        throw new Error("Eroare la trimiterea mesajului");
       }
 
       setSubmitStatus("success");
@@ -164,49 +170,49 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="bg-white py-20">
+    <section id="contact" className="bg-white py-20 scroll-mt-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2
-          id="faq-heading"
+          id="contact-heading"
           className="mb-4 text-center text-4xl font-bold text-gray-900 md:text-5xl"
         >
-          Get In Touch
+          Contactează-mă
         </h2>
 
         <p className="mx-auto mb-10 max-w-2xl text-center text-lg text-gray-800">
-          Have questions or ready to begin your healing journey? Reach out, I'm
-          here to help.
+          Ai întrebări sau ești pregătit(ă) să începi călătoria spre vindecare?
+          Scrie-mi, sunt aici să te sprijin.
         </p>
         <div className="grid grid-cols-1 items-start gap-12 md:grid-cols-2 lg:items-center">
           <div className="space-y-6">
             <div>
               <h3 className="text-2xl font-semibold text-gray-800">
-                Dr. Serena Blake, PsyD
+                Dr. Serena Blake
               </h3>
-              <p className="text-gray-600">Clinical Psychologist</p>
+              <p className="text-gray-600">Psiholog Clinician & Psihoterapeut</p>
             </div>
             <div>
-              <h4 className="font-medium text-gray-700">Location</h4>
+              <h4 className="font-medium text-gray-700">Locație cabinet</h4>
               <p className="text-gray-600">
-                1287 Maplewood Drive
+                Str. Exemplului Nr. 12
                 <br />
-                Los Angeles, CA 90026
+                Timișoara, România
               </p>
             </div>
             <div>
-              <h4 className="font-medium text-gray-700">Contact</h4>
+              <h4 className="font-medium text-gray-700">Date de contact</h4>
               <p className="text-gray-600">
-                Phone: (323) 555-0192
+                Telefon: +40 700 000 000
                 <br />
-                Email: serena@blakepsychology.com
+                Email: contact@drserenablake.ro
               </p>
             </div>
             <div>
-              <h4 className="font-medium text-gray-700">Office Hours</h4>
+              <h4 className="font-medium text-gray-700">Program de lucru</h4>
               <p className="text-gray-600">
-                In-person: Tue & Thu, 10 AM-6 PM
+                La cabinet: Marți și Joi, 10:00 – 18:00
                 <br />
-                Virtual via Zoom: Mon, Wed & Fri, 1 PM-5 PM
+                Online (Zoom): Luni, Miercuri și Vineri, 13:00 – 17:00
               </p>
             </div>
             <div className="relative mx-auto aspect-square w-full max-w-sm overflow-hidden rounded-lg lg:mx-0 lg:mr-auto">
@@ -219,7 +225,7 @@ export default function ContactSection() {
                 className="absolute inset-0 h-full w-full object-cover"
                 aria-hidden="true"
               >
-                Your browser does not support the video tag.
+                Browserul tău nu suportă redarea video.
               </video>
             </div>
           </div>
@@ -228,27 +234,27 @@ export default function ContactSection() {
             {submitStatus === "success" ? (
               <div className="rounded-lg bg-green-50 p-4 text-center">
                 <h3 className="text-lg font-medium text-green-800">
-                  Thank you for your message!
+                  Îți mulțumim pentru mesaj!
                 </h3>
                 <p className="mt-2 text-green-700">
-                  We've received your inquiry and will get back to you soon. A
-                  confirmation has been sent to your email.
+                  Am primit solicitarea ta și vom reveni cu un răspuns în cel mai
+                  scurt timp. O confirmare a fost trimisă pe adresa ta de email.
                 </p>
               </div>
             ) : submitStatus === "error" ? (
               <div className="rounded-lg bg-red-50 p-4 text-center">
                 <h3 className="text-lg font-medium text-red-800">
-                  Something went wrong
+                  Ceva nu a funcționat corect
                 </h3>
                 <p className="mt-2 text-red-700">
-                  Please try again later or contact us directly at
-                  serena@blakepsychology.com
+                  Te rugăm să încerci din nou mai târziu sau să ne scrii direct
+                  la contact@drserenablake.ro
                 </p>
                 <button
                   onClick={() => setSubmitStatus(null)}
                   className="mt-4 rounded-lg bg-teal-700 px-4 py-2 font-medium text-white hover:bg-teal-800"
                 >
-                  Try Again
+                  Încearcă din nou
                 </button>
               </div>
             ) : (
@@ -258,7 +264,7 @@ export default function ContactSection() {
                     htmlFor="name"
                     className="mb-2 block text-sm font-medium text-gray-700"
                   >
-                    Name
+                    Nume complet
                   </label>
                   <input
                     id="name"
@@ -266,7 +272,7 @@ export default function ContactSection() {
                     type="text"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Your full name"
+                    placeholder="Numele și prenumele tău"
                     autoComplete="name"
                     required
                     className={`w-full rounded-lg border px-4 py-3 text-gray-900 placeholder-gray-400 transition-colors focus:ring-2 focus:ring-teal-500 focus:outline-none ${
@@ -290,7 +296,7 @@ export default function ContactSection() {
                     type="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="you@example.com"
+                    placeholder="nume@exemplu.ro"
                     autoComplete="email"
                     required
                     className={`w-full rounded-lg border px-4 py-3 text-gray-900 placeholder-gray-400 transition-colors focus:ring-2 focus:ring-teal-500 focus:outline-none ${
@@ -306,7 +312,7 @@ export default function ContactSection() {
                     htmlFor="phone"
                     className="mb-2 block text-sm font-medium text-gray-700"
                   >
-                    Phone
+                    Telefon
                   </label>
                   <input
                     id="phone"
@@ -314,7 +320,7 @@ export default function ContactSection() {
                     type="tel"
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="(555) 234-5678"
+                    placeholder="07XX XXX XXX"
                     autoComplete="tel"
                     required
                     className={`w-full rounded-lg border px-4 py-3 text-gray-900 placeholder-gray-400 transition-colors focus:ring-2 focus:ring-teal-500 focus:outline-none ${
@@ -330,7 +336,7 @@ export default function ContactSection() {
                     htmlFor="message"
                     className="mb-2 block text-sm font-medium text-gray-700"
                   >
-                    Message
+                    Mesaj
                   </label>
                   <textarea
                     id="message"
@@ -338,7 +344,7 @@ export default function ContactSection() {
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="How can I help you?"
+                    placeholder="Cu ce te pot ajuta?"
                     required
                     className={`w-full resize-none rounded-lg border px-4 py-3 text-gray-900 placeholder-gray-400 transition-colors focus:ring-2 focus:ring-teal-500 focus:outline-none ${
                       errors.message ? "border-red-500" : "border-gray-300"
@@ -355,7 +361,7 @@ export default function ContactSection() {
                     htmlFor="time"
                     className="mb-2 block text-sm font-medium text-gray-700"
                   >
-                    Preferred Contact Time
+                    Interval orar preferat
                   </label>
                   <input
                     id="time"
@@ -363,15 +369,15 @@ export default function ContactSection() {
                     type="text"
                     value={formData.time}
                     onChange={handleChange}
-                    placeholder="e.g., Mornings, Afternoons, Evenings, Weekends"
+                    placeholder="ex: Dimineața, După-amiaza, Seara"
                     required
                     className={`w-full rounded-lg border px-4 py-3 text-gray-900 placeholder-gray-400 transition-colors focus:ring-2 focus:ring-teal-500 focus:outline-none ${
                       errors.time ? "border-red-500" : "border-gray-300"
                     }`}
                   />
                   <p className="mt-1 text-sm text-gray-500">
-                    Let us know when you're typically available for a call or
-                    consultation
+                    Spune-ne când ești de obicei disponibil(ă) pentru un apel sau
+                    o consultație
                   </p>
                   {errors.time && (
                     <p className="mt-1 text-sm text-red-600">{errors.time}</p>
@@ -382,7 +388,7 @@ export default function ContactSection() {
                     htmlFor="contactMethod"
                     className="mb-2 block text-sm font-medium text-gray-700"
                   >
-                    Preferred Contact Method
+                    Metoda preferată de contact
                   </label>
                   <select
                     id="contactMethod"
@@ -396,11 +402,11 @@ export default function ContactSection() {
                         : "border-gray-300"
                     } ${!formData.contactMethod ? "text-gray-400" : ""}`}
                   >
-                    <option value="">Select preferred method</option>
-                    <option value="phone">Phone Call</option>
+                    <option value="">Alege metoda preferată</option>
+                    <option value="phone">Apel telefonic</option>
                     <option value="email">Email</option>
-                    <option value="text">Text Message</option>
-                    <option value="any">Any Method</option>
+                    <option value="text">Mesaj SMS / WhatsApp</option>
+                    <option value="any">Orice metodă</option>
                   </select>
                   {errors.contactMethod && (
                     <p className="mt-1 text-sm text-red-600">
@@ -439,7 +445,8 @@ export default function ContactSection() {
                     htmlFor="agree"
                     className="text-sm leading-relaxed text-gray-600"
                   >
-                    I agree to be contacted regarding this inquiry.
+                    Sunt de acord să fiu contactat(ă) în legătură cu această
+                    solicitare.
                   </label>
                 </div>
                 {errors.agree && (
@@ -450,7 +457,7 @@ export default function ContactSection() {
                   disabled={isSubmitting}
                   className="w-full rounded-lg bg-teal-700 px-6 py-4 font-medium text-white transition-colors hover:bg-teal-800 focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 disabled:opacity-50"
                 >
-                  {isSubmitting ? "Sending..." : "Submit"}
+                  {isSubmitting ? "Se trimite..." : "Trimite mesajul"}
                 </button>{" "}
                 <div className="border-t border-gray-200 pt-4">
                   <p className="text-center text-sm leading-relaxed text-gray-600">
@@ -467,15 +474,15 @@ export default function ContactSection() {
                         />
                       </svg>
                     </span>
-                    By submitting, you agree to our{" "}
+                    Prin trimiterea formularului, ești de acord cu{" "}
                     <a
-                      href="#"
+                      href="/privacy-policy"
                       className="text-teal-700 underline hover:text-teal-800"
                     >
-                      Privacy Policy
+                      Politica de confidențialitate
                     </a>{" "}
-                    & Terms of Service and to receive texts and emails & texts
-                    from Dr. Serena Blake.
+                    și Termenii și condițiile și accepți să primești răspunsuri
+                    pe email sau telefon din partea Dr. Serena Blake.
                   </p>
                 </div>
               </form>

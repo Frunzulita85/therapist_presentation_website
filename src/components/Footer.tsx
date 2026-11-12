@@ -13,20 +13,20 @@ import { MdEmail } from "react-icons/md";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#004346] px-6 py-10 text-white">
+    <footer id="contact" className="bg-[#004346] px-6 py-10 text-white scroll-mt-16">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 md:grid-cols-3">
         <div>
           <h3 className="mb-2 text-xl font-bold">Dr. Serena Blake</h3>
           <p className="text-sm text-gray-200">
-            Licensed Clinical Psychologist (PsyD)
+            Psiholog Clinician & Psihoterapeut
           </p>
           <p className="mt-2 text-sm text-gray-400">
-            Empowering individuals and couples through evidence-based therapy.
+            Sprijinind persoanele și cuplurile prin terapie validată științific.
           </p>
         </div>
 
         <div>
-          <h4 className="mb-2 text-lg font-semibold">Quick Links</h4>
+          <h4 className="mb-2 text-lg font-semibold">Linkuri Rapide</h4>
           <ul className="space-y-2 text-sm text-gray-200">
             {navLinks.map((link) => (
               <li key={link.href}>
@@ -41,15 +41,15 @@ export default function Footer() {
         <div>
           <h4 className="mb-2 text-lg font-semibold">Contact</h4>
           <p className="flex items-center gap-2 text-sm text-gray-200">
-            <FaPhoneAlt className="text-[#c6e6ea]" /> (323) 555-0192
+            <FaPhoneAlt className="text-[#c6e6ea]" /> +40 700 000 000
           </p>
           <p className="mt-1 flex items-center gap-2 text-sm text-gray-200">
             <FaMapMarkerAlt className="text-[#c6e6ea]" />
-            1287 Maplewood Drive, Los Angeles, CA 90026
+            Str. Exemplului Nr. 12, Timișoara
           </p>
           <p className="mt-1 flex items-center gap-2 text-sm text-gray-200">
             <MdEmail className="text-[#c6e6ea]" />
-            serena@blakepsychology.com
+            contact@drserenablake.ro
           </p>
 
           <div className="mt-4 flex gap-4">
@@ -57,6 +57,7 @@ export default function Footer() {
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Facebook"
               className="text-gray-300 hover:text-white"
             >
               <FaFacebook className="h-5 w-5" />
@@ -65,6 +66,7 @@ export default function Footer() {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Instagram"
               className="text-gray-300 hover:text-white"
             >
               <FaInstagram className="h-5 w-5" />
@@ -73,6 +75,7 @@ export default function Footer() {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn"
               className="text-gray-300 hover:text-white"
             >
               <FaLinkedin className="h-5 w-5" />
@@ -83,14 +86,14 @@ export default function Footer() {
 
       <div className="mx-auto mt-10 flex max-w-7xl flex-col items-center justify-between gap-2 border-t border-gray-700 px-6 pt-4 text-center text-sm text-gray-400 md:flex-row">
         <span>
-          © {new Date().getFullYear()} Dr. Serena Blake. All rights reserved.
+          © {new Date().getFullYear()} Dr. Serena Blake. Toate drepturile rezervate.
         </span>
         <div className="space-x-4">
           <Link href="/privacy-policy" className="hover:underline">
-            Privacy Policy
+            Politica de confidențialitate
           </Link>
           <Link href="/terms-of-service" className="hover:underline">
-            Terms of Service
+            Termeni și condiții
           </Link>
         </div>
       </div>

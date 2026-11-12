@@ -8,14 +8,14 @@ export default function ScheduleConsultation() {
         <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-between">
           <div className="text-center lg:text-left">
             <h2 className="text-3xl leading-tight font-bold md:text-4xl">
-              Schedule A Consultation
+              Programează o consultație
             </h2>
           </div>
 
           <div className="max-w-xl text-center lg:text-left">
             <p className="text-xl leading-relaxed font-medium text-white/90">
-              Dr. Serena Blake is currently accepting new clients. Available for
-              online and in-person sessions.
+              Dr. Serena Blake acceptă noi clienți. Ședințele sunt disponibile
+              atât online, cât și fizic, în cabinet.
             </p>
           </div>
 
@@ -25,7 +25,7 @@ export default function ScheduleConsultation() {
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-white px-8 py-4 text-lg font-medium text-white transition-all duration-200 hover:bg-white hover:text-[#004346] hover:shadow-lg"
             >
               <Sparkles className="size-6" />
-              Start Healing
+              Începe vindecarea
             </Link>
           </div>
         </div>

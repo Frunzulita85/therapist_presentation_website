@@ -18,36 +18,36 @@ const parkinsans = Parkinsans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Dr. Serena Blake, PsyD | Clinical Psychologist",
+    default: "Dr. Serena Blake, PsyD | Psiholog Clinic",
     template: "%s | Dr. Serena Blake",
   },
   description:
-    "Connect with Dr. Serena Blake, a licensed clinical psychologist offering compassionate in-person and virtual therapy services in Los Angeles, CA.",
+    "Cabinet de psihologie clinică și psihoterapie. Beneficiază de ședințe de terapie empatică, în cabinet sau online, adaptate nevoilor tale.",
   metadataBase: new URL("https://drserenablake.vercel.app"),
   keywords: [
-    "Clinical Psychologist",
-    "Therapist Los Angeles",
-    "Online Therapy",
-    "Mental Health",
-    "Psychotherapy",
-    "Anxiety",
-    "Depression",
+    "Psiholog Clinic",
+    "Psihoterapeut Timișoara",
+    "Terapie Online",
+    "Sănătate Mintală",
+    "Psihoterapie",
+    "Anxietate",
+    "Depresie",
     "Dr. Serena Blake",
   ],
   openGraph: {
-    title: "Dr. Serena Blake, PsyD | Clinical Psychologist",
+    title: "Dr. Serena Blake, PsyD | Psiholog Clinic",
     description:
-      "Licensed psychologist specializing in anxiety, depression, and life transitions. Schedule a session today.",
+      "Psiholog clinician specializat în anxietate, depresie și dezvoltare personală. Programează o ședință astăzi.",
     url: "https://drserenablake.vercel.app",
     siteName: "Dr. Serena Blake, PsyD",
     type: "website",
-    locale: "en_US",
+    locale: "ro_RO",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Dr. Serena Blake – Clinical Psychologist",
+        alt: "Dr. Serena Blake – Psiholog Clinic",
       },
     ],
   },
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dr. Serena Blake, PsyD",
     description:
-      "Get compassionate therapy with Dr. Serena Blake, a clinical psychologist in Los Angeles. In-person & virtual sessions available.",
+      "Terapie empatică și profesională cu Dr. Serena Blake. Ședințe disponibile în cabinet și online.",
     creator: "@drserenablake",
     images: ["/og-image.png"],
   },
@@ -75,7 +75,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${platypi.variable} ${parkinsans.variable}`}>
+    <html lang="ro" className={`${platypi.variable} ${parkinsans.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>

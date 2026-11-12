@@ -21,12 +21,12 @@ export function FaqSection() {
           id="faq-heading"
           className="mb-4 text-center text-4xl font-bold text-gray-900 md:text-5xl"
         >
-          Frequently Asked Questions
+          Întrebări frecvente
         </h2>
 
         <p className="mx-auto mb-10 max-w-2xl text-center text-lg text-gray-800">
-          Answers to common questions about therapy, session structure, and what
-          to expect when working with Dr. Serena Blake.
+          Răspunsuri la întrebările comune despre terapie, structura ședințelor și
+          la ce să te aștepți în timpul colaborării cu Dr. Serena Blake.
         </p>
 
         <Accordion

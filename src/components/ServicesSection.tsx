@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function ServicesSection() {
   return (
     <section
-      id="services"
+      id="servicii"
       className="bg-white py-20"
       aria-labelledby="services-heading"
     >
@@ -16,11 +16,11 @@ export default function ServicesSection() {
           id="services-heading"
           className="mb-4 text-4xl font-bold text-gray-900 md:text-5xl"
         >
-          Services
+          Servicii
         </h2>
         <p className="mb-10 text-lg text-gray-800">
-          Each session is thoughtfully designed to provide effective,
-          evidence-based support.
+          Fiecare ședință este concepută cu grijă pentru a oferi sprijin eficient,
+          bazat pe dovezi științifice.
         </p>
 
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
@@ -33,7 +33,7 @@ export default function ServicesSection() {
               <div className="relative mb-4 aspect-[1/1] overflow-hidden rounded-xl">
                 <Image
                   src={service.image}
-                  alt={`${service.title} illustration representing ${service.tag}`}
+                  alt={`Ilustrație pentru ${service.title} - ${service.tag}`}
                   fill
                   sizes="(min-width: 768px) 33vw, 50vw"
                   className="object-cover"
@@ -54,10 +54,10 @@ export default function ServicesSection() {
               </p>
               <Link
                 href="#contact"
-                aria-label={`Learn more about ${service.title}`}
+                aria-label={`Află mai multe despre ${service.title}`}
                 className="inline-block rounded-full bg-[#004346] px-5 py-2 text-sm font-medium text-white transition hover:bg-[#09bc8a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#004346] focus-visible:ring-offset-2"
               >
-                Learn More
+                Află mai multe
               </Link>
             </article>
           ))}

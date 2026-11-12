@@ -1,42 +1,42 @@
 export const faqs = [
   {
-    question: "Do you accept insurance?",
+    question: "Lucrați cu casa de asigurări (CNAS) sau decontări?",
     answer:
-      "No, I do not accept insurance directly. However, I provide a superbill which you can submit to your provider for potential reimbursement.",
+      "Nu, ședințele se desfășoară în regim privat. Eliberez însă la cerere chitanță și documentele necesare pentru decontare, dacă asiguratorul tău privat oferă astfel de beneficii.",
   },
   {
-    question: "Are online sessions available?",
+    question: "Sunt disponibile și ședințe online?",
     answer:
-      "Yes, all virtual therapy sessions are conducted via secure Zoom calls for your convenience and privacy.",
+      "Da, toate ședințele de terapie online se desfășoară prin platforme securizate video (Zoom / Google Meet), asigurândconfidențialitate totală și confort de acasă.",
   },
   {
-    question: "What is your cancellation policy?",
+    question: "Care este politica de anulare a ședințelor?",
     answer:
-      "I require at least 24 hours' notice to cancel or reschedule a session. Missed appointments or late cancellations will be billed in full.",
+      "Solicit un aviz de cel puțin 24 de ore pentru anularea sau reprogramarea unei ședințe. Programările anulate târziu sau neprezentările vor fi achitate integral.",
   },
   {
-    question: "What types of clients do you work with?",
+    question: "Cu ce categorie de clienți lucrați?",
     answer:
-      "I work with adults and couples who are seeking support with anxiety, trauma, life transitions, and emotional wellness.",
+      "Lucrez cu adulți și cupluri care își doresc sprijin în gestionarea anxietății, depășirea traumelor, treceri dificile prin etapele vieții și dezvoltare emoțională.",
   },
   {
-    question: "How long is each session?",
+    question: "Cât durează o ședință?",
     answer:
-      "Individual sessions are typically 50 minutes. Couples sessions can be 50 or 75 minutes based on need and agreement.",
+      "Ședințele individuale durează de obicei 50 de minute. Ședințele de cuplu pot dura 50 sau 75 de minute, în funcție de nevoile stabilite de comun acord.",
   },
   {
-    question: "What are your fees?",
+    question: "Care sunt tarifele?",
     answer:
-      "My fees are $200 for individual therapy and $240 for couples therapy. I accept payment by card at the time of service.",
+      "Tarifele sunt de 250 RON pentru terapia individuală și 350 RON pentru consilierea de cuplu. Plata se poate efectua prin card sau transfer bancar.",
   },
   {
-    question: "Where are you located?",
+    question: "Unde este situat cabinetul?",
     answer:
-      "I’m based in Los Angeles and offer in-person sessions locally, along with virtual sessions for California residents.",
+      "Cabinetul fizic este situat în Timișoara, oferind totodată și sesiuni online pentru clienți din țară sau din diaspora.",
   },
   {
-    question: "What issues do you specialize in?",
+    question: "Care sunt specializările tale principale?",
     answer:
-      "My specialties include trauma recovery, relationship concerns, anxiety, emotional regulation, and self-esteem support.",
+      "Mă specializerez în recuperare după traumă, consiliere de cuplu, gestionarea anxietății, reglare emoțională și creșterea stimei de sine.",
   },
 ];

@@ -30,7 +30,7 @@ export default function HeroSection() {
           transition={{ duration: 0.6 }}
           className="mb-4 text-4xl font-extrabold tracking-tight drop-shadow-md md:text-6xl"
         >
-          Feel Heard. Heal Deeply.
+          Simte-te ascultat. Vindecă-te în profunzime.
         </motion.h1>
         <motion.p
           initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
@@ -38,9 +38,8 @@ export default function HeroSection() {
           transition={{ duration: 0.8 }}
           className="mb-6 max-w-2xl text-lg text-white/90 drop-shadow-sm md:text-xl"
         >
-          Dr. Serena Blake, PsyD – Licensed Clinical Psychologist in Los Angeles
-          helping individuals and couples find clarity, balance, and emotional
-          healing.
+         Dr. Serena Blake, PsyD – Psiholog clinician autorizat în Timișoara
+        ajută persoanele și cuplurile să găsească claritate, echilibru și vindecare emoțională.
         </motion.p>
         <motion.div
           initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
@@ -51,7 +50,7 @@ export default function HeroSection() {
             className="rounded-full bg-white px-6 py-3 font-semibold text-black shadow-md transition hover:bg-neutral-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             aria-label="Book a Free Consultation with Dr. Serena Blake"
           >
-            Book a Free Consult
+            Programează o consultație gratuită
           </button>
         </motion.div>
         <motion.div

@@ -12,23 +12,25 @@ import { TestimonialSection } from "@/components/TestimonialSection";
 import Banner from "@/components/ui/banner";
 import React from "react";
 
-const page = () => {
+const Page = () => {
   return (
     <>
       <Banner />
       <Navbar />
-      <HeroSection />
-      <StatsSection />
-      <AboutSection />
-      <ServicesSection />
-      <ScheduleConsultation />
-      <PricingSection />
-      <TestimonialSection />
-      <FaqSection />
-      <ContactForm />
+      <main>
+        <HeroSection />
+        <StatsSection />
+        <AboutSection />
+        <ServicesSection />
+        <ScheduleConsultation />
+        <PricingSection />
+        <TestimonialSection />
+        <FaqSection />
+        <ContactForm />
+      </main>
       <Footer />
     </>
   );
 };
 
-export default page;
+export default Page;
