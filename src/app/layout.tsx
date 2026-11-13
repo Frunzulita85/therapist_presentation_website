@@ -1,3 +1,22 @@
+import type { Metadata } from "next";
+import { Platypi, Parkinsans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import "./globals.css";
+
+const platypi = Platypi({
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-platypi",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const parkinsans = Parkinsans({
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-parkinsans",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: {
     default: "Dr. Serena Blake, PsyD | Psiholog Clinic",
@@ -50,3 +69,21 @@ export const metadata: Metadata = {
     nocache: false,
   },
 };
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="ro" className={`${platypi.variable} ${parkinsans.variable}`}>
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
+      <body className={`${parkinsans.className} antialiased`}>
+        {children}
+        <Analytics />
+      </body>
+    </html>
+  );
+}
