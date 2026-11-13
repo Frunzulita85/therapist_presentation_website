@@ -1,21 +1,3 @@
-import type { Metadata } from "next";
-import { Platypi, Parkinsans } from "next/font/google";
-import "./globals.css";
-
-const platypi = Platypi({
-  weight: ["300", "400", "500", "600", "700", "800"],
-  variable: "--font-platypi",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const parkinsans = Parkinsans({
-  weight: ["300", "400", "500", "600", "700", "800"],
-  variable: "--font-parkinsans",
-  subsets: ["latin"],
-  display: "swap",
-});
-
 export const metadata: Metadata = {
   title: {
     default: "Dr. Serena Blake, PsyD | Psiholog Clinic",
@@ -23,7 +5,7 @@ export const metadata: Metadata = {
   },
   description:
     "Cabinet de psihologie clinică și psihoterapie. Beneficiază de ședințe de terapie empatică, în cabinet sau online, adaptate nevoilor tale.",
-  metadataBase: new URL("https://drserenablake.vercel.app"),
+  metadataBase: new URL("https://demowebsiteterapeut.vercel.app"),
   keywords: [
     "Psiholog Clinic",
     "Psihoterapeut Timișoara",
@@ -38,7 +20,7 @@ export const metadata: Metadata = {
     title: "Dr. Serena Blake, PsyD | Psiholog Clinic",
     description:
       "Psiholog clinician specializat în anxietate, depresie și dezvoltare personală. Programează o ședință astăzi.",
-    url: "https://drserenablake.vercel.app",
+    url: "https://demowebsiteterapeut.vercel.app",
     siteName: "Dr. Serena Blake, PsyD",
     type: "website",
     locale: "ro_RO",
@@ -60,7 +42,7 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
   alternates: {
-    canonical: "https://drserenablake.vercel.app",
+    canonical: "https://demowebsiteterapeut.vercel.app",
   },
   robots: {
     index: true,
@@ -68,18 +50,3 @@ export const metadata: Metadata = {
     nocache: false,
   },
 };
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="ro" className={`${platypi.variable} ${parkinsans.variable}`}>
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-      </head>
-      <body className={`${parkinsans.className} antialiased`}>{children}</body>
-    </html>
-  );
-}
